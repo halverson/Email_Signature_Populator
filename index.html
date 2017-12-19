@@ -11,10 +11,20 @@
 <body>
 
   <header>
-    <h1>Email Signature Populator 6000</h1>
+    <h1>The Email Signature Populator 6000</h1>
   </header>
 
   <section>
+    <div class="fileInput">
+      <label for="templatePath">Choose the HTML template file.</label>
+      <input type="file" name="Template_File" id="templatePath" />
+    </div>
+    <div class="detailsInput">
+      <input type="text" name="fullName" value="" placeholder="Name Surname" id="fullName" />
+    </div>
+    <div class="submitDiv">
+      <button type="button" name="generate">Generate Signatures</button>
+    </div>
   </section>
 
   <footer>
