@@ -15,17 +15,31 @@
   </header>
 
   <section>
+
     <div class="fileInput container">
       <label for="templatePath">Choose the HTML template file.</label>
       <input type="file" name="Template_File" id="templatePath" />
     </div>
+
     <div class="detailsInput container">
-      <input type="text" name="fullName" value="" placeholder="Name Surname" id="fullName" />
-      <button type="button" name="addName" id="addNameBtn">+</button>
+
+      <ul id="addNameList">
+
+        <li id="addNameItem">
+          <input type="text" name="fullName" value="" placeholder="Name Surname" id="fullName" />
+          <button type="button" name="addName" id="addNameBtn">+</button>
+        </li>
+
+      </ul>
+
     </div>
+
     <div class="submitDiv container">
+
       <button type="button" name="generate" id="genBtn">Generate Signatures</button>
+
     </div>
+
   </section>
 
 </body>
