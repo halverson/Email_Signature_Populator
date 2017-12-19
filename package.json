@@ -1,0 +1,14 @@
+{
+  "name": "email_signature_populator",
+  "version": "1.0.0",
+  "description": "quickly gnerate email signatures for a list of names based on a template file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brent Nygaard",
+  "license": "MIT",
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  }
+}
