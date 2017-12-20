@@ -1,33 +1,18 @@
-/* function addNameItem () {
-  var node = document.createElement('LI');
-  var content = document.createTextNode('<input type="text" name="fullName" value="" placeholder="Name Surname" id="fullName" /><button type="button" name="addName" id="addNameBtn">+</button>');
-  node.appendChild(content);
-  document.getElementById('addNameList').appendChild(node);
-} */
+var addBTN = document.getElementsByClassName('addNameBtn');
 
-function createHTMLelem (htmlStr) {
-  var frag = document.createDocumentFragment();
-  var temp = document.createElement('li');
-  temp.innerHTML = htmlStr;
-  while (temp.firstChild) {
-    frag.appendChild(temp.firstChild);
-  }
-  return frag;
+for (var i = 0; i < addBTN.length; i++) {
+  addBTN[i].addEventListener('click', function () {
+    var node = document.createElement('LI');
+    node.setAttribute('id', 'addNameItem');
+    node.innerHTML = '<input type="text" name="fullName" value="" placeholder="Name Surname" id="fullName"> <button type="button" name="addName" class="addNameBtn">+</button>';
+    document.getElementById('addNameList').appendChild(node);
+  });
+  console.log(addBTN);
 }
 
-var addBTN = document.getElementById('addNameBtn');
-
-var fragment = createHTMLelem('<li id="addNameItem"><input type="text" name="fullName" value="" placeholder="Name Surname" id="fullName" /> <button type="button" name="addName" id="addNameBtn">+</button></li>');
-
-addBTN.onclick = function () {
-  console.log('Click!');
-  document.getElementById('addNameList').appendChild(fragment);
-};
-
-/* addBTN.onclick = function () {
-  var list = document.getElementById('addNameList');
+/* addBTN.addEventListener('click', function () {
   var node = document.createElement('LI');
-  var content = document.createTextNode('<input type="text" name="fullName" value="" placeholder="Name Surname" id="fullName" /><button type="button" name="addName" id="addNameBtn">+</button>');
-  node.appendChild(content);
-  list.appendChild(node);
-}; */
+  node.setAttribute('id', 'addNameItem');
+  node.innerHTML = '<input type="text" name="fullName" value="" placeholder="Name Surname" id="fullName"> <button type="button" name="addName" class="addNameBtn">+</button>';
+  document.getElementById('addNameList').appendChild(node);
+}); */
