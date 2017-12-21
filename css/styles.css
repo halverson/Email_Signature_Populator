@@ -44,6 +44,10 @@ li {
   border: none;
 }
 
+.addNameBtn {
+  margin-right: 0.5em;
+}
+
 .container {
   margin: auto;
   padding: 2em 0 2em 0;
