@@ -1,30 +1,30 @@
 body {
   font-family: sans-serif;
-  color: #2E676C;
+  color: #4B505C;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin: 0;
   padding: 0;
-  background-color: #79CFD6;
+  background-color: #DDE8FA;
 }
 
 button {
   padding: 1em;
   border: none;
-  background-color: #2E676C;
+  background-color: #7B8396;
   color: #ffffff;
 }
 
 button:hover {
   color: #ffffff;
-  background-color: #3C868C;
+  background-color: #008CFF;
 }
 
 button:active {
   color: #ffffff;
-  background-color: #CC5342;
+  background-color: #F51A17;
 }
 
 ul {
@@ -59,7 +59,7 @@ header {
   align-items: center;
   margin-bottom: 2em;
   color: #ffffff;
-  background-color: #2E676C;
+  background-color: #0048E8;
 }
 
 label {
