@@ -1,3 +1,4 @@
+// var fs = require('fs');
 var list = document.getElementById('addNameList');
 
 list.addEventListener('click', function (e) {
@@ -38,11 +39,25 @@ function getTemplate (elem) {
   }
 }
 
+function changeName (srcPath, savePath, name) {
+  fs.readFile(srcPath, 'utf8', (err, data) => {
+    if (err) throw err;
+    var newData = data.replace(/\[NAME\]/m, name);
+    fs.writeFile(savePath, newData, (err) => {
+      if (err) throw err;
+      console.log(name + ' ' + 'complete');
+    });
+  });
+}
+
 function generate () {
   var names = getNames('fullName');
   var path = getTemplate('templatePath');
   console.log(names);
   console.log('File path: ' + path);
+  for (var x = 0; x < names.length; x++) {
+    changeName(path, 'output/' + names[x] + '.html', names[x]);
+  }
 }
 
 document.getElementById('genBtn').addEventListener('click', generate);
