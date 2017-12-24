@@ -1,14 +1,18 @@
-document.addEventListener('click', function (e) {
+var list = document.getElementById('addNameList');
+
+list.addEventListener('click', function (e) {
   if (e.target.className === 'addNameBtn') {
     addLI();
   } else if (e.target.className === 'delNameBtn') {
-    delLI(e.target);
+    if (list.children.length > 1) {
+      delLI(e.target);
+    }
   }
 });
 
 function addLI () {
   var node = document.createElement('LI');
-  node.innerHTML = '<input type="text" name="fullName" value="" placeholder="Name Surname" class="fullName"><button type="button" name="addName" class="addNameBtn">+</button><button type="button" name="delName" class="delNameBtn">x</button>';
+  node.innerHTML = '<input type="text" name="fullName" value="" placeholder="Name Surname" class="textInput fullName"><button type="button" name="addName" class="addNameBtn">+</button><button type="button" name="delName" class="delNameBtn">x</button>';
   document.getElementById('addNameList').appendChild(node);
 }
 
