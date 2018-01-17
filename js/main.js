@@ -1,4 +1,4 @@
-// var fs = require('fs');
+var fs = require('fs');
 var list = document.getElementById('addNameList');
 
 list.addEventListener('click', function (e) {
